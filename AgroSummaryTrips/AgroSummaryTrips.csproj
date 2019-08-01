@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{625B991A-12CA-41F1-B55E-78540AFDB3F1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AgroSummaryTrips</RootNamespace>
+    <AssemblyName>AgroSummaryTrips</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\ANTON\Desktop\New\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>WFAFSC.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4E6480DE6C0997C1889D9B94E3F34BA4211C73FD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AgroSummaryTrips_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="MySql.Data, Version=6.3.2.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.3.2\Assemblies\v2.0\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.3.2.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.3.2\Assemblies\v2.0\MySql.Data.Entity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySqlBackup">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.3.2\Assemblies\v2.0\MySqlBackup.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddTrucks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTrucks.Designer.cs">
+      <DependentUpon>AddTrucks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseLibrary.cs" />
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddDocu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddDocu.Designer.cs">
+      <DependentUpon>frmAddDocu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddSD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddSD.Designer.cs">
+      <DependentUpon>frmAddSD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAuditTrail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAuditTrail.Designer.cs">
+      <DependentUpon>frmAuditTrail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBakRes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBakRes.Designer.cs">
+      <DependentUpon>frmBakRes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCSConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCSConfig.Designer.cs">
+      <DependentUpon>frmCSConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDocu.Designer.cs">
+      <DependentUpon>frmDocu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditTruckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditTruckOut.Designer.cs">
+      <DependentUpon>frmEditTruckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmail.Designer.cs">
+      <DependentUpon>frmEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImportNDC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportNDC.Designer.cs">
+      <DependentUpon>frmImportNDC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImportOffice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportOffice.Designer.cs">
+      <DependentUpon>frmImportOffice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNDC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNDC.Designer.cs">
+      <DependentUpon>frmNDC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewLoad.Designer.cs">
+      <DependentUpon>frmViewLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewUnload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewUnload.Designer.cs">
+      <DependentUpon>frmViewUnload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resupply Modules\frmAddLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resupply Modules\frmAddLoad.Designer.cs">
+      <DependentUpon>frmAddLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resupply Modules\frmAddPickup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resupply Modules\frmAddPickup.Designer.cs">
+      <DependentUpon>frmAddPickup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resupply Modules\frmEditLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resupply Modules\frmEditLoad.Designer.cs">
+      <DependentUpon>frmEditLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resupply Modules\frmEditUnload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resupply Modules\frmEditUnload.Designer.cs">
+      <DependentUpon>frmEditUnload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resupply Modules\frmLoaded.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resupply Modules\frmLoaded.Designer.cs">
+      <DependentUpon>frmLoaded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTripReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTripReport.Designer.cs">
+      <DependentUpon>frmTripReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTruckList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTruckList.Designer.cs">
+      <DependentUpon>frmTruckList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTruckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTruckOut.Designer.cs">
+      <DependentUpon>frmTruckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserAcc.Designer.cs">
+      <DependentUpon>frmUserAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resupply Modules\frmTripSum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resupply Modules\frmTripSum.Designer.cs">
+      <DependentUpon>frmTripSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resupply Modules\frmUnload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resupply Modules\frmUnload.Designer.cs">
+      <DependentUpon>frmUnload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlHelper.cs" />
+    <EmbeddedResource Include="AddTrucks.resx">
+      <DependentUpon>AddTrucks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddDocu.resx">
+      <DependentUpon>frmAddDocu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddSD.resx">
+      <DependentUpon>frmAddSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAuditTrail.resx">
+      <DependentUpon>frmAuditTrail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBakRes.resx">
+      <DependentUpon>frmBakRes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCSConfig.resx">
+      <DependentUpon>frmCSConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocu.resx">
+      <DependentUpon>frmDocu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditTruckOut.resx">
+      <DependentUpon>frmEditTruckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmail.resx">
+      <DependentUpon>frmEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportNDC.resx">
+      <DependentUpon>frmImportNDC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportOffice.resx">
+      <DependentUpon>frmImportOffice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNDC.resx">
+      <DependentUpon>frmNDC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewLoad.resx">
+      <DependentUpon>frmViewLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewUnload.resx">
+      <DependentUpon>frmViewUnload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resupply Modules\frmAddLoad.resx">
+      <DependentUpon>frmAddLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resupply Modules\frmAddPickup.resx">
+      <DependentUpon>frmAddPickup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resupply Modules\frmEditLoad.resx">
+      <DependentUpon>frmEditLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resupply Modules\frmEditUnload.resx">
+      <DependentUpon>frmEditUnload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resupply Modules\frmLoaded.resx">
+      <DependentUpon>frmLoaded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTripReport.resx">
+      <DependentUpon>frmTripReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTruckList.resx">
+      <DependentUpon>frmTruckList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTruckOut.resx">
+      <DependentUpon>frmTruckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserAcc.resx">
+      <DependentUpon>frmUserAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resupply Modules\frmTripSum.resx">
+      <DependentUpon>frmTripSum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resupply Modules\frmUnload.resx">
+      <DependentUpon>frmUnload.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AgroSummaryTrips_TemporaryKey.pfx" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WFAGRO copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WFAFSC.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
